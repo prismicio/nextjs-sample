@@ -1,0 +1,26 @@
+{
+  "Main" : {
+    "name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Name"
+      }
+    },
+    "bio" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Bio"
+      }
+    },
+    "picture" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Picture"
+      }
+    }
+  }
+}
