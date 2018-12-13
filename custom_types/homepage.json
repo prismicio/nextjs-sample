@@ -1,0 +1,276 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1, strong",
+        "label" : "Title",
+        "placeholder" : "Title of the homepage"
+      }
+    },
+    "banner_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Banner image"
+      }
+    },
+    "banner_text" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong",
+        "label" : "Banner text",
+        "placeholder" : "Coffee, reimagined. Enjoy your coffee like you never did before..."
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "choices" : {
+          "featured_items" : {
+            "type" : "Slice",
+            "fieldset" : "Featured items",
+            "description" : "Set of featured items with illustration, title, description and CTA",
+            "icon" : "star",
+            "display" : "grid",
+            "non-repeat" : {
+              "section_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Section title",
+                  "placeholder" : "Our smart algorithms picks ..."
+                }
+              },
+              "button_label" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Button Label",
+                  "placeholder" : "Visit Shop"
+                }
+              },
+              "button_link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Button Link",
+                  "placeholder" : "Choose your link"
+                }
+              }
+            },
+            "repeat" : {
+              "link_to_product" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "product" ],
+                  "label" : "Link to product",
+                  "placeholder" : "Select a product"
+                }
+              }
+            }
+          },
+          "cta_banner" : {
+            "type" : "Slice",
+            "fieldset" : "CTA Banner",
+            "description" : "A wide banner with text and button",
+            "icon" : "chrome_reader_mode",
+            "display" : "list",
+            "non-repeat" : {
+              "image_banner" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Image Banner"
+                }
+              },
+              "banner_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Banner title",
+                  "placeholder" : "Our story"
+                }
+              },
+              "banner_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Banner text",
+                  "placeholder" : "It all started in 1999 ..."
+                }
+              },
+              "cta_label" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "CTA label",
+                  "placeholder" : "You'll never guess ...."
+                }
+              },
+              "cta_link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "CTA link",
+                  "placeholder" : "CTA link",
+                  "allowTargetBlank" : true
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "big_bullet_item" : {
+            "type" : "Slice",
+            "fieldset" : "Item with numbers",
+            "description" : "1 number and description in a grid layout",
+            "icon" : "filter_1",
+            "display" : "grid",
+            "non-repeat" : {
+              "title_section" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Title Section",
+                  "placeholder" : "How it works ..."
+                }
+              }
+            },
+            "repeat" : {
+              "description_paragraph" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong, em",
+                  "label" : "Description paragraph",
+                  "placeholder" : "Select some amazing coffee"
+                }
+              }
+            }
+          },
+          "text_block" : {
+            "type" : "Slice",
+            "fieldset" : "Text block",
+            "description" : "Text block",
+            "icon" : "text_fields",
+            "display" : "list",
+            "non-repeat" : {
+              "title1" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Title",
+                  "placeholder" : "Philosophy"
+                }
+              },
+              "paragraph" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "Paragraph",
+                  "placeholder" : "We believe that having a good cup of coffee ..."
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "separator" : {
+            "type" : "Slice",
+            "fieldset" : "Separator",
+            "description" : "Separator",
+            "icon" : "remove",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  },
+  "SEO & Social" : {
+    "display_name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "useAsTitle" : true,
+        "single" : "paragraph",
+        "label" : "Display name",
+        "placeholder" : "Display name"
+      }
+    },
+    "meta_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Meta title",
+        "placeholder" : "Meta title"
+      }
+    },
+    "meta_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Meta description",
+        "placeholder" : "Meta description"
+      }
+    },
+    "canonical_url" : {
+      "type" : "StructuredText",
+      "config" : {
+        "label" : "Canonical URL",
+        "placeholder" : "Canonical URL"
+      }
+    },
+    "body1" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "choices" : {
+          "twitter_card" : {
+            "type" : "Slice",
+            "fieldset" : "Twitter card",
+            "description" : "Fields you need to customize the Twitter Card",
+            "icon" : "adjust",
+            "display" : "list",
+            "non-repeat" : {
+              "card_title" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Title",
+                  "placeholder" : "Title for Twitter"
+                }
+              },
+              "card_description" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Description",
+                  "placeholder" : "Description for Twitter"
+                }
+              },
+              "card_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 1200,
+                    "height" : 630
+                  },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "facebook__open_graph_" : {
+            "type" : "Slice",
+            "fieldset" : "Facebook (Open Graph)",
+            "description" : "Fields to customize OG cards",
+            "icon" : "thumb_up",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  }
+}

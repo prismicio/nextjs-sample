@@ -1,0 +1,79 @@
+{
+  "SEO & Social" : {
+    "meta_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Meta title",
+        "placeholder" : "Meta title"
+      }
+    },
+    "meta_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Meta description",
+        "placeholder" : "Meta description"
+      }
+    },
+    "canonical_url" : {
+      "type" : "StructuredText",
+      "config" : {
+        "label" : "Canonical URL",
+        "placeholder" : "Canonical URL"
+      }
+    },
+    "body1" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "choices" : {
+          "twitter_card" : {
+            "type" : "Slice",
+            "fieldset" : "Twitter card",
+            "description" : "Fields you need to customize the Twitter Card",
+            "icon" : "adjust",
+            "display" : "list",
+            "non-repeat" : {
+              "card_title" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Title",
+                  "placeholder" : "Title for Twitter"
+                }
+              },
+              "card_description" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Description",
+                  "placeholder" : "Description for Twitter"
+                }
+              },
+              "card_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 1200,
+                    "height" : 630
+                  },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "facebook__open_graph_" : {
+            "type" : "Slice",
+            "fieldset" : "Facebook (Open Graph)",
+            "description" : "Fields to customize OG cards",
+            "icon" : "thumb_up",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  }
+}

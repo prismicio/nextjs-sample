@@ -1,0 +1,75 @@
+{
+  "Header" : {
+    "site_name" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Site name"
+      }
+    },
+    "header_nav_items" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "text" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Text"
+            }
+          },
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "label" : "Link"
+            }
+          }
+        },
+        "label" : "Header navigation items"
+      }
+    }
+  },
+  "Footer" : {
+    "footer_nav_items" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "text" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Text"
+            }
+          },
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "label" : "Link"
+            }
+          }
+        },
+        "label" : "Footer navigation items"
+      }
+    },
+    "footer_social_items" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "icon" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "Icon"
+            }
+          },
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "allowTargetBlank" : true,
+              "label" : "Link"
+            }
+          }
+        },
+        "label" : "Footer social items"
+      }
+    }
+  }
+}
