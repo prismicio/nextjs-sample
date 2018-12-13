@@ -27,7 +27,7 @@ export default class extends React.Component {
       <Head className={this.props.className}>
         <title>{RichText.asText(this.props && this.props.title || 'Not Found')}</title>
         <meta name="description" content={RichText.asText(this.props && this.props.description || '')} />
-        <meta charset="utf-8"/>
+        <meta charSet="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="theme-color" content="#000000" />
         <meta name="author" content="Prismic"/>
@@ -35,7 +35,7 @@ export default class extends React.Component {
         <link href="/static/images/punch.png" rel="icon" type="image/png" />
 
         <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet"/>
-        <link href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
+        <link href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossOrigin="anonymous" />
 
         <link href="/_next/static/style.css" rel="stylesheet" />
 
