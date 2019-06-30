@@ -1,10 +1,11 @@
-const routes = require('next-routes')
+const nextRoutes = require('next-routes');
+const routes = module.exports = nextRoutes();
 
-module.exports = routes()
-.add('index', '/')
-.add('products', '/products')
-.add('product', '/products/:uid')
-.add('bloghome', '/blog')
-.add('blogpost', '/blog/:uid')
-.add('preview', '/preview')
-.add('notfound', '/*')
+routes.add('home', '/', '/index');
+routes.add('second', '/second');
+routes.add('speakers', '/speakers');
+routes.add('speaker', '/speakers/:uid');
+routes.add('articles', '/articles');
+routes.add('article', '/articles/:uid');
+routes.add('preview', '/preview');
+routes.add('notfound', '/*');

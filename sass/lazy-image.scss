@@ -1,0 +1,9 @@
+.img-lazy {
+  min-height: 535px;
+  opacity: 0;
+  transition: opacity 550ms ease;
+
+  &--loaded {
+    opacity: 1;
+  }
+}

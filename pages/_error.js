@@ -1,44 +1,57 @@
-import React from 'react'
-import { Link } from '../routes'
+import { Button, Container, Jumbotron } from 'react-bootstrap';
+import React from 'react';
 
 export default class Error extends React.Component {
-  static getInitialProps({ res, err }) {
-    const statusCode = res ? res.statusCode : err ? err.statusCode : null
-    return { statusCode }
+  static getInitialProps ({ res, err }) {
+    const statusCode = res ? res.statusCode : err ? err.statusCode : null;
+
+    console.log('> > > > > > > ~SERVER ERRROR~ > > > > > > >', statusCode);
+
+    return { statusCode };
   }
 
-  render404() {
+  render404 () {
     return (
-      <section className="container">
-        <h1>Oh no!</h1>
-        <h3>We can't seem to find the page you're looking for.</h3>
-        <h3><Link route='/'><a>Back to the homepage</a></Link></h3>
-      </section>
-    )
+      <Jumbotron fluid>
+        <Container>
+          <h3>Page not found &ndash; 404</h3>
+          <hr />
+          <h2>Sorry, we can't seem to locate the page you have tried to visit.</h2>
+          <h4>Maybe you can still find what you're looking for...</h4>
+          <Button href="/" variant="info">Go to the homepage</Button>
+        </Container>
+      </Jumbotron>
+    );
   }
 
-  render500() {
+  render500 () {
     return (
-      <section className="container">
-        <h1>Oh no!</h1>
-        <h3>Something went wrong. Please contact the support.</h3>
-      </section>
-    )
+      <Jumbotron fluid>
+        <Container>
+          <h3>Server encountered an error &ndash; 500</h3>
+          <hr />
+          <h2>Sorry, there was a problem processing your request.</h2>
+          <h4>Please try again very soon and hopefully this issue will have past.</h4>
+        </Container>
+      </Jumbotron>
+    );
   }
 
-  renderDefault() {
+  renderDefault () {
     return (
-      <p>
-        {this.props.statusCode
-          ? `An error ${this.props.statusCode} occurred on server`
-          : 'An error occurred on client'}
-    </p>
-    )
+      <Jumbotron className="mt-5">
+        <p className="h3">
+          {this.props.statusCode
+            ? `An error ${this.props.statusCode} occured on the server, we appologise. Please try again.`
+            : `An error occured in this application, we appologise. Please try again`}
+        </p>
+      </Jumbotron>
+    );
   }
 
-  render() {
-    if(this.props.statusCode == 404) return this.render404()
-    else if(this.props.statusCode >= 500 && this.props.statusCode <= 599) return render500()
-    else renderDefault()
+  render () {
+    if (this.props.statusCode === 404) return this.render404();
+    else if (this.props.statusCode >= 500 && this.props.statusCode <= 599) return this.render500();
+    return this.renderDefault();
   }
 }

@@ -1,12 +1,11 @@
 {
     "version": 2,
-    "name": "prismic-nextjs-sample",
+    "name": "gwp-event",
     "builds": [
         { "src": "next.config.js", "use": "@now/next" }
     ],
     "routes": [
-        {"src": "^/products/(?<id>[^/]*)", "dest": "/product?uid=$id"},
-        {"src": "/blog", "dest": "/bloghome"},
-        {"src": "^/blog/(?<id>[^/]*)", "dest": "/blogpost?uid=$id"}
+        {"src": "^/speakers/(?<id>[^/]*)", "dest": "/speaker?uid=$id"},
+        {"src": "^/articles/(?<id>[^/]*)", "dest": "/post.js?uid=$id"}
     ]
 }

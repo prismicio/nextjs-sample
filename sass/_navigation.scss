@@ -1,0 +1,21 @@
+// Navigation
+
+.primary-navigation {
+  position: relative;
+  top: 55px;
+  width: 100%;
+
+  .nav-link {
+    color: $white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+    letter-spacing: 2px;
+    line-height: 31px;
+    margin: 0 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.nav__logo img {
+  height: 40px;
+}

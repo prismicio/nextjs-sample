@@ -1,0 +1,18 @@
+// Hero
+
+.hero {
+  background-color: $blue;
+  margin-top: -64px;
+  min-height: 900px;
+  padding-bottom: 150px;
+  padding-top: 250px;
+
+  &__stats {
+    color: $white;
+    margin-top: 100px;
+  }
+
+  .stat div {
+    font-size: 64px;
+  }
+}
