@@ -19,7 +19,7 @@
     "helmet": "^3.12.1",
     "next": "^6.1.1",
     "next-routes": "^1.4.2",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.13.1",
     "prismic-javascript": "^2.0.0-beta.0",
     "prismic-reactjs": "^0.3.1",
     "react": "^16.6.3",
